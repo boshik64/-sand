@@ -1,0 +1,141 @@
+body{
+    overflow: hidden;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-areas:
+    "h h"
+    "n c";
+    grid-template-rows: 60px 100vh;
+    grid-template-columns: 150px 1fr;
+
+}
+         /* active */
+.wrapper.active{
+    grid-template-areas:
+    "h h"
+    "c c";
+    grid-template-rows: 60px 100vh;
+    grid-template-columns: 100%;
+}
+
+
+/* header */
+.header{
+    grid-area: h;
+    background-color: rgb(151, 143, 143);
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.btn span{
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(0, 0, 0);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.btn span:nth-of-type(2){
+    top: calc(50% - 5px);
+}
+
+.btn span:nth-of-type(3){
+    top: calc(50% + 5px);
+}
+
+
+        /* active */
+
+.btn.active span:first-of-type{
+    top: 50%;
+    transform: translate(-25%, -25%) rotate(-90deg);
+}
+
+.btn.active span:nth-of-type(2){
+    top: 50%;
+    transform: translate(-45%, -45%) rotate(+90deg);
+}
+
+.btn.active span:nth-of-type(3){
+    top: 50%;
+    transform: translate(-65%, -65%) rotate(+90deg);
+}
+
+
+/* navbar */
+
+.navbar{
+    grid-area: n;
+    background-color: rgb(168, 156, 156);
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.navbar__item{
+    display: flex;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.navbar__item:hover{
+    color: #000;
+    font-size: 20px;
+}
+        /* active */
+.navbar.active{
+    transform: translateX(-150%);
+}
+
+/* content */
+.content{
+    grid-area: c;
+    background-color: rgb(146, 140, 140);
+}
+
+
+.exercises{
+    margin: 20px;
+}
+
+.exercises__item{
+    padding-bottom: 20px;
+}
+
+/* checkbox */
+
+.checkbox-group{
+    display: flex;
+    width: max-content;
+}
+
+/* .checkbox__item{
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+} */
+
+.checkbox__img{
+    width: 90px;
+    height: 90px;
+    opacity: 0.05;
+    transition: 0.5s;
+}
+
+#checkitem:checked ~ .checkbox__img {
+    opacity: 1;
+  }

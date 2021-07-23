@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Песок</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <div class="navbar">
+            <a href="#" class="navbar__item">Главная</a>
+            <a href="#" class="navbar__item">Новости</a>
+            <a href="#" class="navbar__item">Галлерея</a>
+            <a href="#" class="navbar__item">Контакты</a>
+        </div>
+
+
+        <div class="content">
+            <div class="exercises">
+                <div class="exercises__item">
+                    <b>#2 Сделать функцию сдвига элементов массива вправо на N шагов:</b>
+                    <br><br>
+                    let arr1=[11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+                    <br><br>
+                    arr1.unshift.apply(arr1, arr1.splice(7));
+                    <br><br>
+                    console.log(arr1);
+                </div>
+
+                <div class="exercises__item">
+                    <b>#3 </b>К сожалению, к выполнению задания №3 , на данный момент , я не готов. Я пытался, гуглил,
+                    но с алгоритмами мне пока тяжело.<br>P.S. Надеюсь с вашей помощью , я в скором времени смогу решить
+                    данную задачу без проблем =)
+                </div>
+
+                <div class="exercises__item">
+                    <b>#4 Реализовать отображение/скрытие элементов при переключении чек-боксов</b>
+                    <br>
+                    <b>Условие: </b>На странице есть группа чек-боксов. Которые привязаны к элементам на странице
+                    (произвольные). Реализовать отображение/скрытие элементов при переключении чек-боксов.
+                    К списку чекбоксов добавить чек-бокс вкл/откл всех элементов, при этом в списке чек-боксы должны
+                    менять свое состояние.
+                    <br>
+
+
+                    <fieldset id="shest" class="checkbox-group">
+                        <legend><label><input type="checkbox"> Выбрать все</label></legend>
+                        <label>
+                            <input type="checkbox" id="checkitem"> <img class="checkbox__img"
+                                src="./img/494px-Astralis_logo.png" alt="">
+                        </label>
+                        <label>
+                            <input type="checkbox" id="checkitem"> <img class="checkbox__img" src="./img/NAVI_logo.png"
+                                alt="">
+                        </label>
+                        <label>
+                            <input type="checkbox" id="checkitem"> <img class="checkbox__img"
+                                src="./img/Virtus.proLogo.png" alt="">
+                        </label>
+                    </fieldset>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
